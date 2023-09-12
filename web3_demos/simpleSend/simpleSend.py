@@ -15,7 +15,7 @@ w3 = Web3(Web3.HTTPProvider('https://endpoints.omniatech.io/v1/eth/sepolia/publi
 # Load account private key from crypted local file
 with open("other files/key_user.json", "r") as file:
     data = json.load(file)
-recoveredPK = w3.eth.account.decrypt(data, 'password')
+recoveredPK = w3.eth.account.decrypt(data, '1234')
 account1 = w3.eth.account.from_key(recoveredPK)
 
 def send_transaction(fromAccount,toAddress,value):
